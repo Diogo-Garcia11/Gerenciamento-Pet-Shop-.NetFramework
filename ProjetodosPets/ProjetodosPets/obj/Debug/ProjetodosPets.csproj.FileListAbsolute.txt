@@ -1,0 +1,13 @@
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\bin\Debug\PetShop.mdf
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\bin\Debug\PetShop_log.ldf
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\bin\Debug\ProjetodosPets.exe.config
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\bin\Debug\ProjetodosPets.exe
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\bin\Debug\ProjetodosPets.pdb
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.csproj.AssemblyReference.cache
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.frmMenu.resources
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.frmTutor.resources
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.Properties.Resources.resources
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.csproj.GenerateResource.cache
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.csproj.CoreCompileInputs.cache
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.exe
+C:\Users\alunoinfo\Documents\GitHub\ProjPetDSS24-6Diogo_Keteli\ProjetodosPets\ProjetodosPets\obj\Debug\ProjetodosPets.pdb
