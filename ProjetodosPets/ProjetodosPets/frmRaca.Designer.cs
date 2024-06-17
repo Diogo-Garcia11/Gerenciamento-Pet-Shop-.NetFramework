@@ -28,77 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtCodRaca = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label6
+            // txtCodRaca
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(152, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 70;
-            this.label6.Text = "label6";
+            this.txtCodRaca.AutoSize = true;
+            this.txtCodRaca.Location = new System.Drawing.Point(151, 94);
+            this.txtCodRaca.Name = "txtCodRaca";
+            this.txtCodRaca.Size = new System.Drawing.Size(64, 13);
+            this.txtCodRaca.TabIndex = 70;
+            this.txtCodRaca.Text = "Código raça";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(155, 44);
+            this.textBox4.Location = new System.Drawing.Point(154, 60);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 69;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(155, 94);
+            this.textBox3.Location = new System.Drawing.Point(154, 110);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 68;
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.Location = new System.Drawing.Point(254, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 67;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(226, 223);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 67;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnIncluir
             // 
-            this.button1.Location = new System.Drawing.Point(147, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnIncluir.Location = new System.Drawing.Point(119, 223);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.TabIndex = 66;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 28);
+            this.label1.Location = new System.Drawing.Point(151, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 64;
-            this.label1.Text = "label1";
+            this.label1.Text = "Codigo Especie";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(151, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Descrição";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(154, 162);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(100, 20);
+            this.txtDescricao.TabIndex = 71;
             // 
             // frmRaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(409, 352);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.txtCodRaca);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.label1);
             this.Name = "frmRaca";
             this.Text = "frmRaca";
+            this.Load += new System.EventHandler(this.frmRaca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,11 +127,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtCodRaca;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDescricao;
     }
 }
