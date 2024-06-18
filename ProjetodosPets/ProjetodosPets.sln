@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetodosPets", "ProjetodosPets\ProjetodosPets.csproj", "{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9BADFE0-AA78-4071-93F4-6CCCD5A8DEB6}"
-	ProjectSection(SolutionItems) = preProject
-		ProjetodosPets\clsConexao.cs = ProjetodosPets\clsConexao.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

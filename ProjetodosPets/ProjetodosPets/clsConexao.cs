@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjDSS_seg_20_5
+namespace ProjetodosPets
 {
     internal class clsConexao
     {

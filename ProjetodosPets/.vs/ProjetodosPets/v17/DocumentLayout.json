@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmtutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmtutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmraca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmmarcacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmmarcacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmexames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmexames.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmespecie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmespecie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmespecie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -27,24 +27,8 @@
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9BADFE0-AA78-4071-93F4-6CCCD5A8DEB6}|Solution Items{B9BADFE0-AA78-4071-93F4-6CCCD5A8DEB6}|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9BADFE0-AA78-4071-93F4-6CCCD5A8DEB6}|Solution Items{B9BADFE0-AA78-4071-93F4-6CCCD5A8DEB6}|solutionrelative:ProjetodosPets\\clsConexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,55 +46,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmRaca.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmRaca.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmRaca.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmRaca.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmRaca.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T22:25:57.18Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmMarcacao.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmMarcacao.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmMarcacao.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmMarcacao.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmMarcacao.cs [Design]",
+              "Title": "clsConexao.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\clsConexao.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
+              "RelativeToolTip": "ProjetodosPets\\clsConexao.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAA4wBkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T22:25:51.355Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-18T22:40:59.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmEspecie.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmEspecie.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmEspecie.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmEspecie.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmEspecie.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T22:25:38.861Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "frmVet.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
               "RelativeDocumentMoniker": "ProjetodosPets\\frmVet.cs",
               "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs [Design]",
               "RelativeToolTip": "ProjetodosPets\\frmVet.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T21:59:44.445Z",
+              "WhenOpened": "2024-06-18T22:37:14.202Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "frmVet.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmVet.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
+              "RelativeToolTip": "ProjetodosPets\\frmVet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T22:30:27.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmPet.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
               "RelativeDocumentMoniker": "ProjetodosPets\\frmPet.cs",
@@ -118,42 +92,6 @@
               "RelativeToolTip": "ProjetodosPets\\frmPet.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T21:46:39.504Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmTutor.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmTutor.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmTutor.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmTutor.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmTutor.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T21:22:45.757Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmAtendimento.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmAtendimento.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmAtendimento.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T23:07:35.301Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmExames.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmExames.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmExames.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmExames.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmExames.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T22:50:38.517Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -170,20 +108,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "clsConexao.cs",
-              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\clsConexao.cs",
-              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
-              "RelativeToolTip": "ProjetodosPets\\clsConexao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "frmEspecie.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmEspecie.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmEspecie.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmEspecie.cs [Design]",
+              "RelativeToolTip": "ProjetodosPets\\frmEspecie.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T22:50:38.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T22:25:38.861Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\Program.cs",
               "RelativeDocumentMoniker": "ProjetodosPets\\Program.cs",
