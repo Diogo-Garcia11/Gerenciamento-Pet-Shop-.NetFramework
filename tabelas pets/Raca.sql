@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Raca]
 (
-	[IdRaca] INT IDENTITY NOT NULL PRIMARY KEY, 
+	[idRaca] INT IDENTITY NOT NULL PRIMARY KEY, 
     [descRaca] NVARCHAR(45) NOT NULL, 
-    [fkEspecie] INT NOT NULL, 
-    CONSTRAINT [FK_Raca_ToEspecie] FOREIGN KEY (fkEspecie) REFERENCES [Especie]([idEspecie])
+    [idEspecie] INT NOT NULL, 
+    CONSTRAINT [FK_Raca_ToEspecie] FOREIGN KEY ([idEspecie]) REFERENCES [Especie]([idEspecie])
 )

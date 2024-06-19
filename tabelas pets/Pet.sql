@@ -6,7 +6,9 @@
     [nascPet] DATE NOT NULL, 
     [situacaoPet] NVARCHAR(10) NOT NULL, 
     [cpfTutor] NCHAR(11) NOT NULL, 
-    [fkRaca] NVARCHAR(45) NOT NULL, 
-    [fkEspecie] NVARCHAR(45) NOT NULL, 
-    CONSTRAINT [FK_Pet_ToTutor] FOREIGN KEY ([cpfTutor]) REFERENCES [Tutor]([cpfTutor])
+    [idRaca] INT NOT NULL, 
+    [idEspecie] INT NOT NULL, 
+    CONSTRAINT [FK_Pet_ToTutor] FOREIGN KEY ([cpfTutor]) REFERENCES [Tutor]([cpfTutor]), 
+    CONSTRAINT [FK_Pet_ToRaca] FOREIGN KEY ([idRaca]) REFERENCES [Raca]([idRaca]), 
+    CONSTRAINT [FK_Pet_ToEspecie] FOREIGN KEY ([idEspecie]) REFERENCES [Especie]([idEspecie])
 )

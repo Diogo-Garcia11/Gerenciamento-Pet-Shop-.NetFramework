@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Exame]
+(
+	[IdExame] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [descExame] NVARCHAR(50) NOT NULL
+)
