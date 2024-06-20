@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.txtCodRaca = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCodEsp = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtCodRaca
@@ -47,12 +48,12 @@
             this.txtCodRaca.TabIndex = 70;
             this.txtCodRaca.Text = "Código raça";
             // 
-            // textBox4
+            // txtCodEsp
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 60);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 69;
+            this.txtCodEsp.Location = new System.Drawing.Point(154, 60);
+            this.txtCodEsp.Name = "txtCodEsp";
+            this.txtCodEsp.Size = new System.Drawing.Size(100, 20);
+            this.txtCodEsp.TabIndex = 69;
             // 
             // textBox3
             // 
@@ -69,6 +70,7 @@
             this.btnExcluir.TabIndex = 67;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnIncluir
             // 
@@ -78,6 +80,7 @@
             this.btnIncluir.TabIndex = 66;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // label1
             // 
@@ -104,15 +107,26 @@
             this.txtDescricao.Size = new System.Drawing.Size(100, 20);
             this.txtDescricao.TabIndex = 71;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(12, 317);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 73;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmRaca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 352);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtCodRaca);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCodEsp);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnIncluir);
@@ -128,12 +142,13 @@
         #endregion
 
         private System.Windows.Forms.Label txtCodRaca;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCodEsp;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
