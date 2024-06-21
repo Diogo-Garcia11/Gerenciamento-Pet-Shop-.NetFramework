@@ -33,7 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPescricao = new System.Windows.Forms.TextBox();
             this.Exames = new System.Windows.Forms.Label();
             this.cboExames = new System.Windows.Forms.ComboBox();
             this.dgvAtendimento = new System.Windows.Forms.DataGridView();
@@ -42,6 +42,7 @@
             this.lblTutor = new System.Windows.Forms.Label();
             this.lblDia = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAtendimento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,17 +87,17 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(28, 169);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.Size = new System.Drawing.Size(54, 13);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Descrição";
+            this.label9.Text = "Pescrição";
             // 
-            // textBox1
+            // txtPescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 166);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 74);
-            this.textBox1.TabIndex = 9;
+            this.txtPescricao.Location = new System.Drawing.Point(86, 166);
+            this.txtPescricao.Multiline = true;
+            this.txtPescricao.Name = "txtPescricao";
+            this.txtPescricao.Size = new System.Drawing.Size(141, 74);
+            this.txtPescricao.TabIndex = 9;
             // 
             // Exames
             // 
@@ -120,8 +121,9 @@
             this.dgvAtendimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAtendimento.Location = new System.Drawing.Point(34, 324);
             this.dgvAtendimento.Name = "dgvAtendimento";
-            this.dgvAtendimento.Size = new System.Drawing.Size(240, 150);
+            this.dgvAtendimento.Size = new System.Drawing.Size(313, 150);
             this.dgvAtendimento.TabIndex = 12;
+            this.dgvAtendimento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtendimento_CellClick);
             // 
             // btnFinalizar
             // 
@@ -131,6 +133,7 @@
             this.btnFinalizar.TabIndex = 13;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // lblPet
             // 
@@ -168,11 +171,22 @@
             this.lblHora.TabIndex = 17;
             this.lblHora.Text = "...";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(3, 2);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 74;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmAtendimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(359, 543);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblDia);
             this.Controls.Add(this.lblTutor);
@@ -181,7 +195,7 @@
             this.Controls.Add(this.dgvAtendimento);
             this.Controls.Add(this.cboExames);
             this.Controls.Add(this.Exames);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPescricao);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label8);
@@ -203,7 +217,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPescricao;
         private System.Windows.Forms.Label Exames;
         private System.Windows.Forms.ComboBox cboExames;
         private System.Windows.Forms.DataGridView dgvAtendimento;
@@ -212,5 +226,6 @@
         private System.Windows.Forms.Label lblTutor;
         private System.Windows.Forms.Label lblDia;
         private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
