@@ -39,7 +39,7 @@ namespace ProjetodosPets
             cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie =" +Especie +";");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
-            string id = SDR.ToString();
+            string id = SDR["idEspecie"].ToString();
             idEspecie = id;
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id + ";");
@@ -60,7 +60,7 @@ namespace ProjetodosPets
             cmdsql.Append("SELECT idRaca FROM Raca WHERE descRaca =" + Raca + ";");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
-            string id = SDR.ToString();
+            string id = SDR["idRaca"].ToString();
             idRaca = id;
         }
         string idRaca;

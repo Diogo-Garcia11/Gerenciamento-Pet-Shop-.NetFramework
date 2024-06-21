@@ -57,14 +57,14 @@ namespace ProjetodosPets
 
             id = idMarcacao;
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT * FROM Marcacao WHERE idMarcacao = " + idMarcacao);
+            cmdsql.Append("SELECT Pet.idPet, nomeTutor.Tutor, Marcacao.diaMarcacao, Marcacao.horaMarcacao FROM Marcacao INNER JOIN Pet ON Marcacao.idPet =Pet.idPet INNER JOIN Tutor ON Marcacao.cpfTutor = Tutor.cpfTutor WHERE idMarcacao = " + idMarcacao + ")");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
             {
 
                 lblPet.Text = SDR["idPet"].ToString();
-                lblTutor.Text = SDR["cpfTutor"].ToString();//corrigir isso, e o nome, nao cpf
+                lblTutor.Text = SDR["nomeTutor"].ToString();
                 lblDia.Text = SDR["diaMarcacao"].ToString();
                 lblHora.Text = SDR["horaMarcacao"].ToString();
                

@@ -108,6 +108,10 @@ namespace ProjetodosPets
                 Conexao.StrSql = "SELECT * FROM Pet WHERE cpfTutor= " + DT.ToString() + ";";
                 dgvTutor.DataSource = DT;
             }
+            else if(!string.IsNullOrEmpty(txtCPF.Text) && !string.IsNullOrEmpty(txtCelular.Text))
+            {
+                MessageBox.Show("Decida o campo chave");
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
