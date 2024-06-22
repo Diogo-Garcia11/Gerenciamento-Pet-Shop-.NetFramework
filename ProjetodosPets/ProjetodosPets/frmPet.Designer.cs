@@ -243,6 +243,7 @@
             this.Controls.Add(this.txtCpf);
             this.Name = "frmPet";
             this.Text = "Pet";
+            this.Load += new System.EventHandler(this.frmPet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

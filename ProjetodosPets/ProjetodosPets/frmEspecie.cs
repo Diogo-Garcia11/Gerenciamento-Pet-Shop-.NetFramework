@@ -71,7 +71,7 @@ namespace ProjetodosPets
             else
             {
                 cmdsql.Remove(0, cmdsql.Length);
-                cmdsql.Append("DELETE FROM Veterinario WHERE idEspecie =" + CodEspecie);
+                cmdsql.Append("DELETE FROM Especie WHERE idEspecie =" + CodEspecie);
 
 
                 Conexao.StrSql = cmdsql.ToString();

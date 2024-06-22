@@ -16,5 +16,10 @@ namespace ProjetodosPets
         {
             InitializeComponent();
         }
+
+        private void frmTutor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

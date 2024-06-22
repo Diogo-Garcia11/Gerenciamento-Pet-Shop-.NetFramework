@@ -36,9 +36,9 @@
             this.chkBanho = new System.Windows.Forms.CheckBox();
             this.chkTosa = new System.Windows.Forms.CheckBox();
             this.chkConsulta = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCodPet = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCRMV = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.lblPet = new System.Windows.Forms.Label();
             this.lblTutor = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcacao)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -125,13 +126,14 @@
             this.chkConsulta.TabIndex = 7;
             this.chkConsulta.Text = "Consulta R$150,00";
             this.chkConsulta.UseVisualStyleBackColor = true;
+            this.chkConsulta.CheckedChanged += new System.EventHandler(this.chkConsulta_CheckedChanged);
             // 
-            // textBox3
+            // txtCodPet
             // 
-            this.textBox3.Location = new System.Drawing.Point(67, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 11;
+            this.txtCodPet.Location = new System.Drawing.Point(67, 74);
+            this.txtCodPet.Name = "txtCodPet";
+            this.txtCodPet.Size = new System.Drawing.Size(100, 20);
+            this.txtCodPet.TabIndex = 11;
             // 
             // label4
             // 
@@ -142,12 +144,12 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "CodPet";
             // 
-            // textBox4
+            // txtCRMV
             // 
-            this.textBox4.Location = new System.Drawing.Point(67, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtCRMV.Location = new System.Drawing.Point(67, 36);
+            this.txtCRMV.Name = "txtCRMV";
+            this.txtCRMV.Size = new System.Drawing.Size(100, 20);
+            this.txtCRMV.TabIndex = 9;
             // 
             // label5
             // 
@@ -186,6 +188,7 @@
             this.rbnAberto.TabStop = true;
             this.rbnAberto.Text = "Aberto";
             this.rbnAberto.UseVisualStyleBackColor = true;
+            this.rbnAberto.CheckedChanged += new System.EventHandler(this.rbnAberto_CheckedChanged);
             // 
             // rbnFechado
             // 
@@ -214,6 +217,7 @@
             this.btnIncluir.TabIndex = 17;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnExcluir
             // 
@@ -223,6 +227,7 @@
             this.btnExcluir.TabIndex = 18;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // lblVet
             // 
@@ -253,13 +258,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtCRMV);
             this.groupBox1.Controls.Add(this.lblTutor);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lblPet);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblVet);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtCodPet);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(61, 207);
             this.groupBox1.Name = "groupBox1";
@@ -268,11 +273,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(12, 585);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 23;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
             // frmMarcacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 620);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnIncluir);
@@ -290,6 +305,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmMarcacao";
             this.Text = "frmMarcacao";
+            this.Load += new System.EventHandler(this.frmMarcacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcacao)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -308,9 +324,9 @@
         private System.Windows.Forms.CheckBox chkBanho;
         private System.Windows.Forms.CheckBox chkTosa;
         private System.Windows.Forms.CheckBox chkConsulta;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCodPet;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCRMV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -323,5 +339,6 @@
         private System.Windows.Forms.Label lblPet;
         private System.Windows.Forms.Label lblTutor;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
