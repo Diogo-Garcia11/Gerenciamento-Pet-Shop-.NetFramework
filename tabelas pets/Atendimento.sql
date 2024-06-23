@@ -1,4 +1,4 @@
-﻿dCREATE TABLE [dbo].[Atendimento]
+﻿CREATE TABLE [dbo].[Atendimento]
 (
 	[IdAtendimento] INT IDENTITY NOT NULL PRIMARY KEY, 
     [diaAtendimento] DATE NOT NULL, 
