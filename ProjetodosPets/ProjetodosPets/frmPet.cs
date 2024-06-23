@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -45,6 +46,7 @@ namespace ProjetodosPets
             if (SDR.Read())
             {
                 string id = SDR["idEspecie"].ToString();
+                idEspecie = id;
                 SDR = Conexao.RetornarDataReader();
                 cmdsql.Remove(0, cmdsql.Length);
                 cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id);
@@ -71,11 +73,17 @@ namespace ProjetodosPets
             string Raca = cboRaca.Text;
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT idRaca FROM Raca WHERE descRaca =" + Raca + ";");
+            cmdsql.Append("SELECT idRaca FROM Raca WHERE descRaca ='" + Raca + "'");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
-            string id = SDR["idRaca"].ToString();
-            idRaca = id;
+            if (SDR.Read())
+            {
+
+                string id = SDR["idRaca"].ToString();
+                
+                idRaca = id;
+            }
+            
         }
         string idRaca;
         private void cboSituacao_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,23 +123,29 @@ namespace ProjetodosPets
             
             string situacao = "Ativo";
             string sexo = "nada";
-            if (rdMacho.Checked)
+            if (rdMacho.Checked || rdFemea.Checked)
             {
-                sexo = "Macho";
+                if (rdMacho.Checked)
+                {
+                    sexo = "Macho";
+                }
+                else if (rdFemea.Checked)
+                {
+                    sexo = "Femea";
+                }
             }
-            else if (rdFemea.Checked)
+            else
             {
-                sexo = "Femea";
+                MessageBox.Show("Está faltando informações para enviar");
             }
+            
 
             if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(cboEspecie.Text) || string.IsNullOrEmpty(cboRaca.Text) )
             {
-                MessageBox.Show("Está faltando informações para enviar");
+                MessageBox.Show("Está faltando informações para enviar1");
+                
             }
-            if(rdMacho.Checked || rdFemea.Checked)
-            {
-                MessageBox.Show("Está faltando informações para enviar");
-            }
+            
             else
             {
 
@@ -139,7 +153,7 @@ namespace ProjetodosPets
                 cmdsql.Append("INSERT INTO Pet ");
                 cmdsql.Append("(nomePet, sexoPet, nascPet,situacaoPet, cpfTutor, idRaca, idEspecie)");
                 cmdsql.Append("values ");
-                cmdsql.Append("('" + nome + "', '" + sexo + "', '" + data + "', '" + situacao + "', '" + CPF + "', " + idRaca + "," +idEspecie);
+                cmdsql.Append("('" + nome + "', '" + sexo + "', '" + data + "', '" + situacao + "', '" + CPF + "', " + idRaca + ", " +idEspecie+")");
                 Conexao.StrSql = cmdsql.ToString();
 
 
@@ -261,14 +275,14 @@ namespace ProjetodosPets
 
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT Pet.idPet, Pet.nomePet, Pet.sexoPet, Pet.cpfTutor, Pet.nascPet, Especie.descEspecie, Raca.descRaca, Pet.situacaoPet FROM Pet INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie INNER JOIN Raca ON Pet.idRaca = Raca.idRaca WHERE idPet = " + idPet);
+            cmdsql.Append("SELECT Pet.nomePet, Pet.sexoPet, Pet.cpfTutor, Pet.nascPet, Especie.descEspecie, Raca.descRaca, Pet.situacaoPet FROM Pet INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie INNER JOIN Raca ON Pet.idRaca = Raca.idRaca WHERE Pet.idPet = " + idPet);
             Conexao.StrSql = cmdsql.ToString();
             
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
             {
-
-                txtCodPet.Text = SDR["idPet"].ToString();
+                
+                txtCodPet.Text = idPet;
                 txtNome.Text = SDR["nomePet"].ToString();
                 string sexo = SDR["sexoPet"].ToString();
                 if (sexo == "Macho")
@@ -281,8 +295,7 @@ namespace ProjetodosPets
                 }
                 txtCPF.Text = SDR["cpfTutor"].ToString();
 
-                string data = SDR["nascPet"].ToString();
-                dtpData.Text = data;
+                //dtpData.Value = SDR["nascPet"].ToString();
 
                 cboEspecie.Text = SDR["descEspecie"].ToString();
 
