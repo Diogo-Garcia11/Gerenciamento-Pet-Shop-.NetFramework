@@ -1,24 +1,39 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\",
+  "WorkspaceRootPath": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\diogo\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmvet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\ket\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\clsconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_KET_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Exame.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmpet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\diogo\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|c:\\users\\diogo\\source\\repos\\projpetdss24-6diogo_keteli\\projetodospets\\projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9DE34B92-5226-4D50-B8C8-39341CE5A5AB}|ProjetodosPets\\ProjetodosPets.csproj|solutionrelative:projetodospets\\frmatendimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -26,12 +41,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DIOGO_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Especie.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,88 +50,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\2p012uo0..sql",
-              "ToolTip": "SQLQuery1.sql *",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-23T21:44:13.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAtendimento.cs",
-              "DocumentMoniker": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmAtendimento.cs",
-              "ToolTip": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
-              "RelativeToolTip": "ProjetodosPets\\frmAtendimento.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T21:18:42.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmAtendimento.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmAtendimento.cs",
-              "ToolTip": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmAtendimento.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T21:18:40.86Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.Raca [Dados]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DIOGO_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Raca.sql",
-              "ToolTip": "dbo.Raca [Dados]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-23T20:52:42.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Especie [Dados]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DIOGO_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Especie.sql",
-              "ToolTip": "dbo.Especie [Dados]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-23T20:43:42.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmPet.cs",
-              "DocumentMoniker": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
-              "RelativeDocumentMoniker": "ProjetodosPets\\frmPet.cs",
-              "ToolTip": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
-              "RelativeToolTip": "ProjetodosPets\\frmPet.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAADwvzUAAAA3AAAA",
+              "Title": "frmVet.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmVet.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
+              "RelativeToolTip": "ProjetodosPets\\frmVet.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T20:40:21.477Z",
+              "WhenOpened": "2024-06-23T22:32:02.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmVet.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmVet.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmVet.cs [Design]",
+              "RelativeToolTip": "ProjetodosPets\\frmVet.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T22:31:59.789Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsConexao.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\clsConexao.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\clsConexao.cs",
+              "RelativeToolTip": "ProjetodosPets\\clsConexao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAYwBQAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T22:11:24.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Exame [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_KET_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Exame.sql",
+              "ToolTip": "dbo.Exame [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-23T22:11:12.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Diogo\\AppData\\Local\\Temp\\2p012uo0..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-23T21:44:13.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmAtendimento.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmAtendimento.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
+              "RelativeToolTip": "ProjetodosPets\\frmAtendimento.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T21:18:42.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmAtendimento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmAtendimento.cs",
+              "ToolTip": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmAtendimento.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T21:18:40.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Raca [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DIOGO_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Raca.sql",
+              "ToolTip": "dbo.Raca [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-23T20:52:42.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.Especie [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_DIOGO_SOURCE_REPOS_PROJPETDSS24_6DIOGO_KETELI_PROJETODOSPETS_PROJETODOSPETS_PETSHOP.MDF/True/SqlTable/dbo.Especie.sql",
+              "ToolTip": "dbo.Especie [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-23T20:43:42.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmPet.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
+              "RelativeDocumentMoniker": "ProjetodosPets\\frmPet.cs",
+              "ToolTip": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
+              "RelativeToolTip": "ProjetodosPets\\frmPet.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswDUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T20:40:21.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmPet.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
+              "DocumentMoniker": "C:\\Users\\ket\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs",
               "RelativeDocumentMoniker": "ProjetodosPets\\frmPet.cs",
               "ToolTip": "C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs [Design]",
-              "RelativeToolTip": "ProjetodosPets\\frmPet.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\frmPet.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T20:40:19.85Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-23T20:40:19.85Z"
             }
           ]
         }
