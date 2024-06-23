@@ -37,17 +37,12 @@ namespace ProjetodosPets
 
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie =" +Especie +";");
-
             Conexao.StrSql = cmdsql.ToString();
-
             SDR = Conexao.RetornarDataReader();
             string id = SDR["idEspecie"].ToString();
-
             idEspecie = id;
-
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id + ";");
-
             Conexao.StrSql = cmdsql.ToString();
 
             while (SDR.Read())
@@ -63,12 +58,9 @@ namespace ProjetodosPets
 
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT idRaca FROM Raca WHERE descRaca =" + Raca + ";");
-
             Conexao.StrSql = cmdsql.ToString();
-
             SDR = Conexao.RetornarDataReader();
             string id = SDR["idRaca"].ToString();
-
             idRaca = id;
         }
         string idRaca;
@@ -91,6 +83,7 @@ namespace ProjetodosPets
             while (SDR.Read())
             {
                 cboEspecie.Items.Add(SDR["descEspecie"].ToString());
+
 
             }
         }
@@ -276,11 +269,11 @@ namespace ProjetodosPets
 
                 string especie = SDR["idEspecie"].ToString();
                 Conexao.StrSql = "SELECT descEspecie FROM Especie WHERE idEspecie =" + especie + ";";
-                cboEspecie.Text = SDR["descEspecie"].ToString();
+                cboEspecie.Text = SDR.ToString();
 
                 string raca = SDR["idRaca"].ToString();
                 Conexao.StrSql = "SELECT descRaca FROM Raca WHERE idRaca =" +raca+ ";";
-                cboRaca.Text = SDR["descRaca"].ToString();
+                cboRaca.Text = SDR.ToString();
 
 
                 cboSituacao.Text = SDR["situacaoPet"].ToString();
