@@ -188,7 +188,7 @@
             this.Controls.Add(this.txtCPF);
             this.Name = "frmTutor";
             this.Text = "frmTutor";
-            this.Load += new System.EventHandler(this.frmTutor_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
