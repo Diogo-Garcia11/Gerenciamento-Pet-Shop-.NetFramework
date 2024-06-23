@@ -1,9 +1,9 @@
-﻿CREATE TABLE [dbo].[Atendimento]
+﻿dCREATE TABLE [dbo].[Atendimento]
 (
 	[IdAtendimento] INT IDENTITY NOT NULL PRIMARY KEY, 
     [diaAtendimento] DATE NOT NULL, 
     [horaAtendimento] TIME NOT NULL, 
-    [descAtendimento] NVARCHAR(50) NOT NULL, 
+    [pescAtendimento] NVARCHAR(50) NULL, 
     [idPet] INT NOT NULL, 
     [cpfTutor] NCHAR(11) NOT NULL, 
     [idExame] INT NOT NULL, 

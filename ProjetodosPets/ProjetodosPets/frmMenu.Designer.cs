@@ -38,6 +38,8 @@
             this.espécieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raçaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.examesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atendimentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +77,9 @@
             this.veterinárioToolStripMenuItem,
             this.espécieToolStripMenuItem,
             this.raçaToolStripMenuItem,
-            this.examesToolStripMenuItem});
+            this.examesToolStripMenuItem,
+            this.marcacaoToolStripMenuItem,
+            this.atendimentoToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.cadastroToolStripMenuItem.Text = "Telas";
@@ -122,6 +126,20 @@
             this.examesToolStripMenuItem.Text = "Exames";
             this.examesToolStripMenuItem.Click += new System.EventHandler(this.examesToolStripMenuItem_Click);
             // 
+            // marcacaoToolStripMenuItem
+            // 
+            this.marcacaoToolStripMenuItem.Name = "marcacaoToolStripMenuItem";
+            this.marcacaoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcacaoToolStripMenuItem.Text = "Marcacao";
+            this.marcacaoToolStripMenuItem.Click += new System.EventHandler(this.marcacaoToolStripMenuItem_Click);
+            // 
+            // atendimentoToolStripMenuItem
+            // 
+            this.atendimentoToolStripMenuItem.Name = "atendimentoToolStripMenuItem";
+            this.atendimentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.atendimentoToolStripMenuItem.Text = "Atendimento";
+            this.atendimentoToolStripMenuItem.Click += new System.EventHandler(this.atendimentoToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,5 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem espécieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raçaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem examesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcacaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atendimentoToolStripMenuItem;
     }
 }

@@ -39,7 +39,7 @@ namespace ProjetodosPets
         }
         private void CarregarGrid()
         {
-            Conexao.StrSql = "SELECT * FROM Marcacao";
+            Conexao.StrSql = "SELECT * FROM Marcacao WHERE situacaoMarcacao = Aberto";
             DS = Conexao.RetornarDataSet();
             DT = DS.Tables[0];
             dgvAtendimento.DataSource = DT;
@@ -58,7 +58,7 @@ namespace ProjetodosPets
 
             id = idMarcacao;
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT Pet.idPet, nomeTutor.Tutor, Marcacao.diaMarcacao, Marcacao.horaMarcacao FROM Marcacao INNER JOIN Pet ON Marcacao.idPet =Pet.idPet INNER JOIN Tutor ON Marcacao.cpfTutor = Tutor.cpfTutor WHERE idMarcacao = " + idMarcacao + ")");
+            cmdsql.Append("SELECT Pet.idPet, Tutor.nomeTutor, Marcacao.diaMarcacao, Marcacao.horaMarcacao FROM Marcacao INNER JOIN Pet ON Marcacao.idPet =Pet.idPet INNER JOIN Tutor ON Marcacao.cpfTutor = Tutor.cpfTutor WHERE idMarcacao = " + idMarcacao + ")");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
@@ -81,18 +81,50 @@ namespace ProjetodosPets
         string id = "nada";
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            //tem mais coisa pra fazer aqui
-            cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("UPDATE Marcacao SET situacaoMarcacao = \"Fechado\" WHERE idMarcacao = " + id);
-            Conexao.StrSql = cmdsql.ToString();
+            string dia = lblDia.Text;
 
-            if (Conexao.ExecutarCmd() > 0)
+            string hora = lblHora.Text;
+
+            string pesc = txtPescricao.Text;
+
+            string pet = lblPet.Text;
+
+            string tutor = lblTutor.Text;
+
+            string exame = cboExames.Text;
+
+            Conexao.StrSql = "SELECT idExame FROM Exame WHERE descExame = " + exame + ";";
+            SDR = Conexao.RetornarDataReader();
+            exame = SDR["idExame"].ToString();
+
+            if (lblPet.Text != "...")
             {
-                MessageBox.Show("Finalizado com sucesso");
+                cmdsql.Remove(0, cmdsql.Length);
+                cmdsql.Append("INSERT INTO Atendimento ");
+                cmdsql.Append("(diaAtendimento, horaAtendimento, pescAtendimento, idPet, cpfTutor, idExame)");
+                cmdsql.Append("values");
+                cmdsql.Append("('" + dia + "', '" + hora + "', '" + pesc + "', " + pet + ", " + tutor + "," + exame + ");");
+
+                Conexao.StrSql = cmdsql.ToString();
+                if((Conexao.ExecutarCmd() > 0))
+                {
+                    MessageBox.Show("Finalizado com Sucesso");
+                    cmdsql.Remove(0, cmdsql.Length);
+                    cmdsql.Append("UPDATE Marcacao SET situacaoMarcacao = \"Fechado\" WHERE idMarcacao = " + id);
+                    Conexao.StrSql = cmdsql.ToString();
+                    if(Conexao.ExecutarCmd() > 0)
+                    {
+                        MessageBox.Show("Marcacao Fechada com Sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("erro ao finalizar a marcacao");
+                    }
+                }  
             }
             else
             {
-                MessageBox.Show("Erro ao finalizar");
+                MessageBox.Show("Clique em uma marcacao em aberto primeiro");
             }
         }
     }

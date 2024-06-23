@@ -48,6 +48,7 @@ namespace ProjetodosPets
                 if (Conexao.ExecutarCmd() > 0)
                 {
                     MessageBox.Show("Gravação executada com sucesso");
+
                 }
                 else
                 {
@@ -102,12 +103,21 @@ namespace ProjetodosPets
             }
             else if (string.IsNullOrEmpty(txtCPF.Text) && !string.IsNullOrEmpty(txtCelular.Text))
             {
-                Conexao.StrSql = "SELECT cpfTutor FROM Tutor WHERE celularTutor = " + txtCelular.Text + ";";
+                string cell = txtCelular.Text;
+                Conexao.StrSql = "SELECT cpfTutor FROM Tutor WHERE celularTutor = " + cell + ";";
                 SDR = Conexao.RetornarDataReader();
-                Conexao.StrSql = "SELECT * FROM Pet WHERE cpfTutor= " + SDR["cpfTutor"].ToString() + ";";
-                DS = Conexao.RetornarDataSet();
-                DT = DS.Tables[0];
-                dgvTutor.DataSource = DT;
+                if (SDR.Read())
+                {
+                    string cpf = SDR["cpfTutor"].ToString();
+                    Conexao.StrSql = "SELECT * FROM Pet WHERE cpfTutor= " + cpf + ";";
+                    DS = Conexao.RetornarDataSet();
+                    DT = DS.Tables[0];
+                    dgvTutor.DataSource = DT;
+                }
+                else
+                {
+                    MessageBox.Show("NAo deu");
+                }
             }
             else if(!string.IsNullOrEmpty(txtCPF.Text) && !string.IsNullOrEmpty(txtCelular.Text))
             {
@@ -129,14 +139,14 @@ namespace ProjetodosPets
             else
             {
                 cmdsql.Remove(0, cmdsql.Length);
-                cmdsql.Append("UPDATE Tutor SET nomeTutor ="+Nome+", emailTutor ="+Email+", celularTutor="+Celular+",  WHERE cpfTutor=" + CPF + ";");
+                cmdsql.Append("UPDATE Tutor SET nomeTutor ='"+Nome+"', emailTutor ='"+Email+"', celularTutor='"+Celular+"' WHERE cpfTutor=" + CPF + ";");
 
                 Conexao.StrSql = cmdsql.ToString();
 
 
                 if (Conexao.ExecutarCmd() > 0)
                 {
-                    MessageBox.Show("Exclusão executada com sucesso");
+                    MessageBox.Show("Alteracao executada com sucesso");
                 }
                 else
                 {

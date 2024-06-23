@@ -58,5 +58,19 @@ namespace ProjetodosPets
             exame.Show();
             this.Hide();
         }
+
+        private void marcacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarcacao marcacao = new frmMarcacao();
+            marcacao.Show();
+            this.Hide();
+        }
+
+        private void atendimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtendimento atendimento = new frmAtendimento();
+            atendimento.Show();
+            this.Hide();
+        }
     }
 }

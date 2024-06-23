@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -76,15 +77,13 @@ namespace ProjetodosPets
             dtpData.CustomFormat = "MM/dd/yyyy";
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT * FROM Especie");
+            cmdsql.Append("SELECT descEspecie FROM Especie");
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
 
             while (SDR.Read())
             {
                 cboEspecie.Items.Add(SDR["descEspecie"].ToString());
-
-
             }
         }
         private void CarregarGrid()
@@ -227,15 +226,19 @@ namespace ProjetodosPets
         {
             string CPF = txtCPF.Text.ToString();
 
+ 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT nomeTutor FROM Tutor WHERE cpfTutor=" +CPF+ ";"); 
-
+            cmdsql.Append("SELECT nomeTutor FROM Tutor WHERE cpfTutor LIKE '%" + CPF + "%'"); ;
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
             
             if(SDR.Read())
             {
                lblNome.Text=SDR["nomeTutor"].ToString();
+            }
+            else
+            {
+                lblNome.Text = "...";
             }
         }
 
@@ -245,8 +248,9 @@ namespace ProjetodosPets
 
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT * FROM Pet WHERE idPet = " + idPet);
+            cmdsql.Append("SELECT Pet.idPet, Pet.nomePet, Pet.sexoPet, Pet.cpfTutor, Pet.nascPet, Especie.descEspecie, Raca.descRaca, Pet.situacaoPet FROM Pet INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie INNER JOIN Raca ON Pet.idRaca = Raca.idRaca WHERE idPet = " + idPet);
             Conexao.StrSql = cmdsql.ToString();
+            
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
             {
@@ -267,13 +271,9 @@ namespace ProjetodosPets
                 string data = SDR["nascPet"].ToString();
                 dtpData.Text = data;
 
-                string especie = SDR["idEspecie"].ToString();
-                Conexao.StrSql = "SELECT descEspecie FROM Especie WHERE idEspecie =" + especie + ";";
-                cboEspecie.Text = SDR.ToString();
+                cboEspecie.Text = SDR["descEspecie"].ToString();
 
-                string raca = SDR["idRaca"].ToString();
-                Conexao.StrSql = "SELECT descRaca FROM Raca WHERE idRaca =" +raca+ ";";
-                cboRaca.Text = SDR.ToString();
+                cboRaca.Text = SDR["descRaca"].ToString();
 
 
                 cboSituacao.Text = SDR["situacaoPet"].ToString();
