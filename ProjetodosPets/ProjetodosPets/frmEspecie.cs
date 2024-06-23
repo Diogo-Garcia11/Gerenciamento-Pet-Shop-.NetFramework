@@ -31,7 +31,7 @@ namespace ProjetodosPets
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
-            String Descricao = txtDescricao.Text;
+            string Descricao = txtDescricao.Text;
 
             if (string.IsNullOrEmpty(txtDescricao.Text))
             {
@@ -43,7 +43,7 @@ namespace ProjetodosPets
                 cmdsql.Append("INSERT INTO Especie ");
                 cmdsql.Append("(descEspecie)");
                 cmdsql.Append("values ");
-                cmdsql.Append("(" + Descricao + ")");
+                cmdsql.Append("('" + Descricao + "')");
 
                 Conexao.StrSql = cmdsql.ToString();
 

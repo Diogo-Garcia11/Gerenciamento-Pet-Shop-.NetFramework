@@ -42,6 +42,7 @@ namespace ProjetodosPets
             SDR = Conexao.RetornarDataReader();
             string id = SDR["idEspecie"].ToString();
             idEspecie = id;
+
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id + ";");
             Conexao.StrSql = cmdsql.ToString();

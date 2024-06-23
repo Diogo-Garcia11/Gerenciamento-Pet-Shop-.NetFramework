@@ -31,8 +31,8 @@ namespace ProjetodosPets
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
-            int CodEspecie = Convert.ToInt32(txtCodEsp.Text.ToString());
-            int Raca = Convert.ToInt32(txtCodRaca.Text.ToString());
+            string CodEspecie = txtCodEsp.Text;
+            string Raca = txtCodRaca.Text;
             string Desc = txtDescricao.Text;
 
             if (string.IsNullOrEmpty(txtDescricao.Text) || string.IsNullOrEmpty(txtCodEsp.Text))
@@ -43,9 +43,9 @@ namespace ProjetodosPets
             {
                 cmdsql.Remove(0, cmdsql.Length);
                 cmdsql.Append("INSERT INTO Raca ");
-                cmdsql.Append("(descEspecie, idEspecie)");
+                cmdsql.Append("(descRaca, idEspecie)");
                 cmdsql.Append("values ");
-                cmdsql.Append("(" + Desc + ", " + CodEspecie + ")");
+                cmdsql.Append("('" + Desc + "', " + CodEspecie + ")");
 
                 Conexao.StrSql = cmdsql.ToString();
 
