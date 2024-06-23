@@ -26,7 +26,7 @@ namespace ProjetodosPets
 
         private void frmVet_Load(object sender, EventArgs e)
         {
-
+            CarregarGrid();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
@@ -45,9 +45,9 @@ namespace ProjetodosPets
             {
                 cmdsql.Remove(0, cmdsql.Length);
                 cmdsql.Append("INSERT INTO Veterinario ");
-                cmdsql.Append("(nomeVet, celVet, enderecoVet)");
+                cmdsql.Append("(CRMVVet, nomeVet, celularVet, enderecoVet)");
                 cmdsql.Append("values ");
-                cmdsql.Append("(" + Nome + ", " + Celular + ", " + Endereco +" )");
+                cmdsql.Append("('" + CRMV + "', '" + Nome + "', '" + Celular + "', '" + Endereco +"' )");
 
                 Conexao.StrSql = cmdsql.ToString();
 
@@ -55,6 +55,7 @@ namespace ProjetodosPets
                 if (Conexao.ExecutarCmd() > 0)
                 {
                     MessageBox.Show("Gravação executada com sucesso");
+                    CarregarGrid();
                 }
                 else
                 {
@@ -81,7 +82,7 @@ namespace ProjetodosPets
             else
             {
                 cmdsql.Remove(0, cmdsql.Length);
-                cmdsql.Append("DELETE FROM Veterinario WHERE CRMV =" + CRMV);
+                cmdsql.Append("DELETE FROM Veterinario WHERE CRMVVet = '" + CRMV + "'");
 
 
                 Conexao.StrSql = cmdsql.ToString();
