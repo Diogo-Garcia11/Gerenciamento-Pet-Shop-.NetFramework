@@ -30,6 +30,7 @@ namespace ProjetodosPets
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT descExame FROM Exame;");
             Conexao.StrSql = cmdsql.ToString();
+            SDR = Conexao.RetornarDataReader();
 
             while (SDR.Read())
             {

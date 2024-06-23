@@ -15,7 +15,7 @@ namespace ProjetodosPets
     {
         clsConexao Conexao = new clsConexao();
         StringBuilder cmdsql = new StringBuilder();
-       // SqlDataReader SDR;
+        SqlDataReader SDR;
         DataSet DS;
         DataTable DT;
         public frmTutor()
@@ -103,9 +103,10 @@ namespace ProjetodosPets
             else if (string.IsNullOrEmpty(txtCPF.Text) && !string.IsNullOrEmpty(txtCelular.Text))
             {
                 Conexao.StrSql = "SELECT cpfTutor FROM Tutor WHERE celularTutor = " + txtCelular.Text + ";";
+                SDR = Conexao.RetornarDataReader();
+                Conexao.StrSql = "SELECT * FROM Pet WHERE cpfTutor= " + SDR["cpfTutor"].ToString() + ";";
                 DS = Conexao.RetornarDataSet();
                 DT = DS.Tables[0];
-                Conexao.StrSql = "SELECT * FROM Pet WHERE cpfTutor= " + DT.ToString() + ";";
                 dgvTutor.DataSource = DT;
             }
         }
