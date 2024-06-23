@@ -15,7 +15,7 @@ namespace ProjetodosPets
     {
         clsConexao Conexao = new clsConexao();
         StringBuilder cmdsql = new StringBuilder();
-        SqlDataReader SDR;
+        
         DataSet DS;
         DataTable DT;
 

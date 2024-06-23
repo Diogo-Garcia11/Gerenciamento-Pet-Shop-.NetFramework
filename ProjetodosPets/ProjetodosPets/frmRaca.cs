@@ -15,10 +15,7 @@ namespace ProjetodosPets
     {
         clsConexao Conexao = new clsConexao();
         StringBuilder cmdsql = new StringBuilder();
-        SqlDataReader SDR;
-        DataSet DS;
-        DataTable DT;
-
+        
         public frmRaca()
         {
             InitializeComponent();
@@ -32,7 +29,7 @@ namespace ProjetodosPets
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             string CodEspecie = txtCodEsp.Text;
-            string Raca = txtCodRaca.Text;
+            
             string Desc = txtDescricao.Text;
 
             if (string.IsNullOrEmpty(txtDescricao.Text) || string.IsNullOrEmpty(txtCodEsp.Text))

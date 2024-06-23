@@ -37,20 +37,32 @@ namespace ProjetodosPets
             string Especie = cboEspecie.Text;
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie =" +Especie +";");
+            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie ='"+ Especie +"'");
+        
             Conexao.StrSql = cmdsql.ToString();
+
             SDR = Conexao.RetornarDataReader();
-            string id = SDR["idEspecie"].ToString();
-            idEspecie = id;
-
-            cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id + ";");
-            Conexao.StrSql = cmdsql.ToString();
-
-            while (SDR.Read())
+            if (SDR.Read())
             {
-                cboRaca.Items.Add(SDR["descRaca"].ToString());
+                string id = SDR["idEspecie"].ToString();
+                SDR = Conexao.RetornarDataReader();
+                cmdsql.Remove(0, cmdsql.Length);
+                cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id);
+                Conexao.StrSql = cmdsql.ToString();
+                if (SDR.Read())
+                {
+                    SDR = Conexao.RetornarDataReader();
+                    cboRaca.Items.Clear();
+                    while (SDR.Read())
+                    {
+                        cboRaca.Items.Add(SDR["descRaca"].ToString());
+                    }
+                }
             }
+            
+
+            
+
         }
         string idEspecie;
         private void cboRaca_SelectedIndexChanged(object sender, EventArgs e)
