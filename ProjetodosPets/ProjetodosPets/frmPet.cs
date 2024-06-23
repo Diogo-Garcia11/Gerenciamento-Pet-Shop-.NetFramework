@@ -38,8 +38,8 @@ namespace ProjetodosPets
             string Especie = cboEspecie.Text;
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie ='"+ Especie +"'");
-        
+            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie ='" + Especie + "'");
+
             Conexao.StrSql = cmdsql.ToString();
 
             SDR = Conexao.RetornarDataReader();
@@ -61,9 +61,9 @@ namespace ProjetodosPets
                     }
                 }
             }
-            
 
-            
+
+
 
         }
         string idEspecie;
@@ -80,10 +80,10 @@ namespace ProjetodosPets
             {
 
                 string id = SDR["idRaca"].ToString();
-                
+
                 idRaca = id;
             }
-            
+
         }
         string idRaca;
         private void cboSituacao_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace ProjetodosPets
             string CPF = txtCPF.Text;
             string nome = txtNome.Text;
             string data = dtpData.Text;
-            
+
             string situacao = "Ativo";
             string sexo = "nada";
             if (rdMacho.Checked || rdFemea.Checked)
@@ -138,14 +138,14 @@ namespace ProjetodosPets
             {
                 MessageBox.Show("Está faltando informações para enviar");
             }
-            
 
-            if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(cboEspecie.Text) || string.IsNullOrEmpty(cboRaca.Text) )
+
+            if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(cboEspecie.Text) || string.IsNullOrEmpty(cboRaca.Text))
             {
                 MessageBox.Show("Está faltando informações para enviar1");
-                
+
             }
-            
+
             else
             {
 
@@ -153,13 +153,14 @@ namespace ProjetodosPets
                 cmdsql.Append("INSERT INTO Pet ");
                 cmdsql.Append("(nomePet, sexoPet, nascPet,situacaoPet, cpfTutor, idRaca, idEspecie)");
                 cmdsql.Append("values ");
-                cmdsql.Append("('" + nome + "', '" + sexo + "', '" + data + "', '" + situacao + "', '" + CPF + "', " + idRaca + ", " +idEspecie+")");
+                cmdsql.Append("('" + nome + "', '" + sexo + "', '" + data + "', '" + situacao + "', '" + CPF + "', " + idRaca + ", " + idEspecie + ")");
                 Conexao.StrSql = cmdsql.ToString();
 
 
                 if (Conexao.ExecutarCmd() > 0)
                 {
                     MessageBox.Show("Inclusao executada com sucesso");
+                    CarregarGrid();
                 }
                 else
                 {
@@ -201,9 +202,9 @@ namespace ProjetodosPets
             string CPF = txtCPF.Text;
             string nome = txtNome.Text;
             string data = dtpData.Text;
-           
             string situacao = cboSituacao.Text;
             string sexo = "nada";
+
             if (rdMacho.Checked)
             {
                 sexo = "Macho";
@@ -212,43 +213,42 @@ namespace ProjetodosPets
             {
                 sexo = "Femea";
             }
-            if (!string.IsNullOrEmpty(txtCodPet.Text))
+            else
             {
-                if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(cboEspecie.Text) || string.IsNullOrEmpty(cboRaca.Text))
-                {
-                    MessageBox.Show("Está faltando informações para enviar");
-                }
-                if (rdMacho.Checked || rdFemea.Checked)
-                {
-                    MessageBox.Show("Está faltando informações para enviar");
-                }
-                else
-                {
+                MessageBox.Show("Selecione o sexo do pet.");
+                return;
+            }
 
-                    cmdsql.Remove(0, cmdsql.Length);
-                    cmdsql.Append("UPDATE Pet ");
-                    cmdsql.Append("SET nomePet="+nome+ ", sexoPet="+sexo+ ", nascPet="+data+ ",situacaoPet="+situacao+ ", cpfTutor="+CPF+ ", idRaca="+idRaca+ ", idEspecie="+idEspecie+")");
-                    cmdsql.Append("WHERE ");
-                    cmdsql.Append("idPet =" +cod+ ";");
-                    Conexao.StrSql = cmdsql.ToString();
+            if (string.IsNullOrEmpty(txtCodPet.Text) || string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(cboEspecie.Text) || string.IsNullOrEmpty(cboRaca.Text))
+            {
+                MessageBox.Show("Está faltando informações para enviar.");
+                return;
+            }
+
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("UPDATE Pet SET " +
+                "nomePet = '" + nome + "', " +
+                "sexoPet = '" + sexo + "', " +
+                "nascPet = '" + data + "', " +
+                "situacaoPet = '" + situacao + "', " +
+                "cpfTutor = '" + CPF + "', " +
+                "idRaca = " + idRaca + ", " +
+                "idEspecie = " + idEspecie + " " +
+                "WHERE idPet = " + cod);
+
+            Conexao.StrSql = cmdsql.ToString();
 
 
-                    if (Conexao.ExecutarCmd() > 0)
-                    {
-                        MessageBox.Show("Exclusão executada com sucesso");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Erro ao executar a exclusão");
-                    }
-                }
+            if (Conexao.ExecutarCmd() > 0)
+            {
+                MessageBox.Show("Alteração executada com sucesso");
+                CarregarGrid();
             }
             else
             {
-                MessageBox.Show("Está faltando informações para enviar");
+                MessageBox.Show("Erro ao executar a alteração");
             }
         }
-
         private void txtCPF_TextChanged(object sender, EventArgs e)
         {
             string CPF = txtCPF.Text.ToString();

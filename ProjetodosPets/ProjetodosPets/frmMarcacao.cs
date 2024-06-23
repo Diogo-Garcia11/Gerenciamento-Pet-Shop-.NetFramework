@@ -59,15 +59,16 @@ namespace ProjetodosPets
             }
 
             cmdsql.Clear();
-            cmdsql.Append("INSERT INTO Marcacao (diaMarcacao, horaMarcacao, banhoMarcacao, tosaMarcacao, consultaMarcacao, CRMV, idPet) VALUES (");
+            cmdsql.Append("INSERT INTO Marcacao (diaMarcacao, horaMarcacao, banhoMarcacao, tosaMarcacao, consultaMarcacao, CRMVVet, idPet) VALUES (");
             cmdsql.Append("'" + Dia.ToString("yyyy-MM-dd") + "', ");
             cmdsql.Append("'" + Hora.ToString("HH:mm:ss") + "', ");
             cmdsql.Append("'" + Banho + "', ");
             cmdsql.Append("'" + Tosa + "', ");
             cmdsql.Append("'" + Consulta + "', ");
             cmdsql.Append("'" + CRMV + "', ");
-            cmdsql.Append(CodPet + ")");
+            cmdsql.Append("'" + CodPet + "', ");
             cmdsql.Append("'" + Situacao + "')");
+
 
             Conexao.StrSql = cmdsql.ToString();
 
@@ -118,16 +119,11 @@ namespace ProjetodosPets
         {
             if (chkConsulta.Checked)
             {
-                txtDia.Enabled = true;
-                txtHora.Enabled = true;
                 txtCRMV.Enabled = true;
                 txtCodPet.Enabled = true;
             }
             else
             {
-
-                txtDia.Enabled = false;
-                txtHora.Enabled = false;
                 txtCRMV.Enabled = false;
                 txtCodPet.Enabled = false;
 
@@ -171,7 +167,7 @@ namespace ProjetodosPets
                 situacao = "Fechado";
             }
 
-            Conexao.StrSql = "SELECT Marcacao.IdMarcacao, Marcacao.diaMarcacao, Marcacao.horaMarcacao, Marcacao.banhoMarcacao, Marcacao.tosaMarcacao, Marcacao.consultaMarcacao, Marcacao.situacaoMarcacao, Marcacao.CRMV, Pet.nomePet, Tutor.nomeTutor " +
+            Conexao.StrSql = "SELECT Marcacao.IdMarcacao, Marcacao.diaMarcacao, Marcacao.horaMarcacao, Marcacao.banhoMarcacao, Marcacao.tosaMarcacao, Marcacao.consultaMarcacao, Marcacao.situacaoMarcacao, Marcacao.CRMVVet, Pet.nomePet, Tutor.nomeTutor " +
                     "FROM Marcacao " +
                     "INNER JOIN Pet ON Marcacao.idPet = Pet.idPet " +
                     "INNER JOIN Tutor ON Pet.cpfTutor = Tutor.cpfTutor " +
@@ -185,6 +181,66 @@ namespace ProjetodosPets
         private void rbnAberto_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCRMV_TextChanged(object sender, EventArgs e)
+        {
+            string CRMV = txtCRMV.Text.ToString();
+
+
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("SELECT nomeVet FROM Veterinario WHERE CRMVVet LIKE '%" + CRMV + "%'"); ;
+            Conexao.StrSql = cmdsql.ToString();
+            SDR = Conexao.RetornarDataReader();
+
+            if (SDR.Read())
+            {
+                lblVet.Text = SDR["nomeVet"].ToString();
+            }
+            else
+            {
+                lblVet.Text = "...";
+            }
+        }
+
+        private void txtCodPet_TextChanged(object sender, EventArgs e)
+        {
+            string CodPet = txtCodPet.Text.ToString();
+
+
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("SELECT nomePet FROM Pet WHERE idPet LIKE '%" + CodPet + "%'"); ;
+            Conexao.StrSql = cmdsql.ToString();
+            SDR = Conexao.RetornarDataReader();
+
+            if (SDR.Read())
+            {
+                lblPet.Text = SDR["nomePet"].ToString();
+            }
+            else
+            {
+                lblPet.Text = "...";
+            }
+        }
+
+        private void txtTutor_TextChanged(object sender, EventArgs e)
+        {
+            string cpfTutor = txtTutor.Text.ToString();
+
+
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("SELECT nomeTutor FROM Tutor WHERE cpfTutor LIKE '%" + cpfTutor + "%'"); ;
+            Conexao.StrSql = cmdsql.ToString();
+            SDR = Conexao.RetornarDataReader();
+
+            if (SDR.Read())
+            {
+                lblTutor.Text = SDR["nomeTutor"].ToString();
+            }
+            else
+            {
+                lblTutor.Text = "...";
+            }
         }
     }
 }

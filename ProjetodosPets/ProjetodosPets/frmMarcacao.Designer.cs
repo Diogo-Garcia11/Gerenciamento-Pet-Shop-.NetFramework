@@ -52,6 +52,7 @@
             this.lblTutor = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.txtTutor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcacao)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -134,6 +135,7 @@
             this.txtCodPet.Name = "txtCodPet";
             this.txtCodPet.Size = new System.Drawing.Size(100, 20);
             this.txtCodPet.TabIndex = 11;
+            this.txtCodPet.TextChanged += new System.EventHandler(this.txtCodPet_TextChanged);
             // 
             // label4
             // 
@@ -150,6 +152,7 @@
             this.txtCRMV.Name = "txtCRMV";
             this.txtCRMV.Size = new System.Drawing.Size(100, 20);
             this.txtCRMV.TabIndex = 9;
+            this.txtCRMV.TextChanged += new System.EventHandler(this.txtCRMV_TextChanged);
             // 
             // label5
             // 
@@ -250,7 +253,7 @@
             // lblTutor
             // 
             this.lblTutor.AutoSize = true;
-            this.lblTutor.Location = new System.Drawing.Point(67, 112);
+            this.lblTutor.Location = new System.Drawing.Point(191, 112);
             this.lblTutor.Name = "lblTutor";
             this.lblTutor.Size = new System.Drawing.Size(16, 13);
             this.lblTutor.TabIndex = 21;
@@ -258,6 +261,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTutor);
             this.groupBox1.Controls.Add(this.txtCRMV);
             this.groupBox1.Controls.Add(this.lblTutor);
             this.groupBox1.Controls.Add(this.label5);
@@ -281,6 +285,14 @@
             this.btnVoltar.TabIndex = 23;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            // 
+            // txtTutor
+            // 
+            this.txtTutor.Location = new System.Drawing.Point(64, 109);
+            this.txtTutor.Name = "txtTutor";
+            this.txtTutor.Size = new System.Drawing.Size(100, 20);
+            this.txtTutor.TabIndex = 22;
+            this.txtTutor.TextChanged += new System.EventHandler(this.txtTutor_TextChanged);
             // 
             // frmMarcacao
             // 
@@ -340,5 +352,6 @@
         private System.Windows.Forms.Label lblTutor;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.TextBox txtTutor;
     }
 }
