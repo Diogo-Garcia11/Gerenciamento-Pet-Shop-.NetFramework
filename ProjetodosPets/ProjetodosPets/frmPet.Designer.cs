@@ -38,7 +38,7 @@
             this.btnIncluir = new System.Windows.Forms.Button();
             this.dgvPet = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
             this.rdMacho = new System.Windows.Forms.RadioButton();
             this.rdFemea = new System.Windows.Forms.RadioButton();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
@@ -47,6 +47,8 @@
             this.cboSituacao = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +101,7 @@
             this.btnAlterar.TabIndex = 18;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
@@ -108,6 +111,7 @@
             this.btnExcluir.TabIndex = 17;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnIncluir
             // 
@@ -117,6 +121,7 @@
             this.btnIncluir.TabIndex = 16;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // dgvPet
             // 
@@ -125,6 +130,7 @@
             this.dgvPet.Name = "dgvPet";
             this.dgvPet.Size = new System.Drawing.Size(506, 150);
             this.dgvPet.TabIndex = 15;
+            this.dgvPet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPet_CellClick);
             // 
             // label1
             // 
@@ -135,17 +141,18 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Código do pet";
             // 
-            // txtCpf
+            // txtCPF
             // 
-            this.txtCpf.Location = new System.Drawing.Point(32, 221);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(100, 20);
-            this.txtCpf.TabIndex = 13;
+            this.txtCPF.Location = new System.Drawing.Point(32, 221);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(100, 20);
+            this.txtCPF.TabIndex = 13;
+            this.txtCPF.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
             // 
             // rdMacho
             // 
             this.rdMacho.AutoSize = true;
-            this.rdMacho.Location = new System.Drawing.Point(32, 141);
+            this.rdMacho.Location = new System.Drawing.Point(32, 145);
             this.rdMacho.Name = "rdMacho";
             this.rdMacho.Size = new System.Drawing.Size(58, 17);
             this.rdMacho.TabIndex = 26;
@@ -156,7 +163,7 @@
             // rdFemea
             // 
             this.rdFemea.AutoSize = true;
-            this.rdFemea.Location = new System.Drawing.Point(123, 141);
+            this.rdFemea.Location = new System.Drawing.Point(123, 145);
             this.rdFemea.Name = "rdFemea";
             this.rdFemea.Size = new System.Drawing.Size(57, 17);
             this.rdFemea.TabIndex = 27;
@@ -166,7 +173,8 @@
             // 
             // dtpData
             // 
-            this.dtpData.Location = new System.Drawing.Point(32, 164);
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpData.Location = new System.Drawing.Point(32, 173);
             this.dtpData.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 20);
@@ -179,6 +187,7 @@
             this.cboEspecie.Name = "cboEspecie";
             this.cboEspecie.Size = new System.Drawing.Size(121, 21);
             this.cboEspecie.TabIndex = 29;
+            this.cboEspecie.SelectedIndexChanged += new System.EventHandler(this.cboEspecie_SelectedIndexChanged);
             // 
             // cboRaca
             // 
@@ -187,6 +196,7 @@
             this.cboRaca.Name = "cboRaca";
             this.cboRaca.Size = new System.Drawing.Size(121, 21);
             this.cboRaca.TabIndex = 30;
+            this.cboRaca.SelectedIndexChanged += new System.EventHandler(this.cboRaca_SelectedIndexChanged);
             // 
             // cboSituacao
             // 
@@ -198,6 +208,7 @@
             this.cboSituacao.Name = "cboSituacao";
             this.cboSituacao.Size = new System.Drawing.Size(121, 21);
             this.cboSituacao.TabIndex = 31;
+            this.cboSituacao.SelectedIndexChanged += new System.EventHandler(this.cboSituacao_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -217,11 +228,32 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Nome";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(2, 2);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 34;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(138, 224);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(16, 13);
+            this.lblNome.TabIndex = 35;
+            this.lblNome.Text = "...";
+            // 
             // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 629);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cboSituacao);
@@ -240,7 +272,7 @@
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.dgvPet);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtCPF);
             this.Name = "frmPet";
             this.Text = "Pet";
             this.Load += new System.EventHandler(this.frmPet_Load);
@@ -262,7 +294,7 @@
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.DataGridView dgvPet;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.RadioButton rdMacho;
         private System.Windows.Forms.RadioButton rdFemea;
         private System.Windows.Forms.DateTimePicker dtpData;
@@ -271,5 +303,7 @@
         private System.Windows.Forms.ComboBox cboSituacao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label lblNome;
     }
 }

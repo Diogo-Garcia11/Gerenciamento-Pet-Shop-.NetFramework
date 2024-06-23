@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cboExame = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cboDesc = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnIncluir = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtIdExame = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,14 +46,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Descrição";
             // 
-            // cboExame
-            // 
-            this.cboExame.FormattingEnabled = true;
-            this.cboExame.Location = new System.Drawing.Point(116, 56);
-            this.cboExame.Name = "cboExame";
-            this.cboExame.Size = new System.Drawing.Size(121, 21);
-            this.cboExame.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -60,21 +55,61 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Código exame";
             // 
-            // cboDesc
+            // txtDescricao
             // 
-            this.cboDesc.Location = new System.Drawing.Point(116, 106);
-            this.cboDesc.Name = "cboDesc";
-            this.cboDesc.Size = new System.Drawing.Size(121, 20);
-            this.cboDesc.TabIndex = 3;
+            this.txtDescricao.Location = new System.Drawing.Point(116, 106);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(121, 20);
+            this.txtDescricao.TabIndex = 3;
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.Location = new System.Drawing.Point(35, 179);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.TabIndex = 4;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(171, 179);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 5;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtIdExame
+            // 
+            this.txtIdExame.Location = new System.Drawing.Point(116, 59);
+            this.txtIdExame.Name = "txtIdExame";
+            this.txtIdExame.Size = new System.Drawing.Size(121, 20);
+            this.txtIdExame.TabIndex = 6;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(5, 3);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 7;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // frmExames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 233);
-            this.Controls.Add(this.cboDesc);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.txtIdExame);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnIncluir);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboExame);
             this.Controls.Add(this.label1);
             this.Name = "frmExames";
             this.Text = "frmExames";
@@ -86,8 +121,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboExame;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cboDesc;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtIdExame;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

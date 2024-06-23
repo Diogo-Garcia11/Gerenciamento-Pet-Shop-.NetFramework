@@ -18,7 +18,7 @@ namespace ProjetodosPets
             set { _StrSql = value; }
         }
 
-        private string strConexao = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\alunoinfo\\Documents\\GitHub\\ProjDSS_27-5\\ProjDSS_seg_20-5\\bdDSS.mdf;Integrated Security=True";
+        private string strConexao = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Diogo\\source\\repos\\ProjPetDSS24-6Diogo_Keteli\\ProjetodosPets\\ProjetodosPets\\PetShop.mdf;Integrated Security=True";
 
 
         private SqlConnection AbrirBanco()

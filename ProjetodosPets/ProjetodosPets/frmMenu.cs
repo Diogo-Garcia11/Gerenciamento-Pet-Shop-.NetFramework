@@ -16,5 +16,61 @@ namespace ProjetodosPets
         {
             InitializeComponent();
         }
+
+        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTutor tutor = new frmTutor();
+            tutor.Show();
+            this.Hide();
+        }
+
+        private void petToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPet pet = new frmPet();
+            pet.Show();
+            this.Hide();
+        }
+
+        private void veterinárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVet vet = new frmVet();
+            vet.Show();
+            this.Hide();
+        }
+
+        private void espécieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEspecie especie = new frmEspecie();
+            especie.Show();
+            this.Hide();
+        }
+
+        private void raçaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRaca raca = new frmRaca();
+            raca.Show();
+            this.Hide();
+        }
+
+        private void examesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExames exame = new frmExames();
+            exame.Show();
+            this.Hide();
+        }
+
+        private void marcacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarcacao marcacao = new frmMarcacao();
+            marcacao.Show();
+            this.Hide();
+        }
+
+        private void atendimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAtendimento atendimento = new frmAtendimento();
+            atendimento.Show();
+            this.Hide();
+        }
     }
 }
