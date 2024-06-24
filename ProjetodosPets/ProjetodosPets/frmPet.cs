@@ -352,13 +352,13 @@ namespace ProjetodosPets
 
                 txtData.Text = nascPet;
 
-                cboEspecie.Items.Clear();
+                
                 cboEspecie.Text = descEspecie;
 
-                cboRaca.Items.Clear();
+                
                 cboRaca.Text = descRaca;
 
-                cboSituacao.Items.Clear();
+                
                 cboSituacao.Text = situacaoPet;
 
 

@@ -272,7 +272,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(61, 188);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(281, 158);
+            this.groupBox1.Size = new System.Drawing.Size(457, 158);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
 <<<<<<< Updated upstream
@@ -336,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 620);
+            this.ClientSize = new System.Drawing.Size(530, 620);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExcluir);
