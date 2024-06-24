@@ -29,46 +29,53 @@ namespace ProjetodosPets
         private void frmMarcacao_Load(object sender, EventArgs e)
         {
             CarregarGrid();
+            BloquearCampos();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             DateTime Dia = Convert.ToDateTime(txtDia.Text);
             DateTime Hora = Convert.ToDateTime(txtHora.Text);
-            string Banho = chkBanho.Text;
-            string Tosa = chkTosa.Text;
-            string Consulta = chkConsulta.Text;
+            string Banho = chkBanho.Checked ? "Sim" : "Nao";
+            string Tosa = chkTosa.Checked ? "Sim" : "Nao";
+            string Consulta = chkConsulta.Checked ? "Sim" : "Nao";
             string CRMV = txtCRMV.Text;
-            string Situacao = "Aberto";
-            int CodPet = Convert.ToInt32(txtCodPet.Text.ToString());
+            string Situacao = "Abt";
+            string Tutor = txtTutor.Text;
+            int CodPet = Convert.ToInt32(txtCodPet.Text);
 
 
-            if (chkBanho.Checked)
+            if (string.IsNullOrEmpty(txtDia.Text) || string.IsNullOrEmpty(txtHora.Text) || string.IsNullOrEmpty(Tutor))
             {
-                Banho = chkBanho.Text;
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;
             }
 
-            if (chkTosa.Checked)
-            {
-                Tosa = chkTosa.Text;
-            }
+
+            cmdsql.Clear();
+            cmdsql.Append("INSERT INTO Marcacao (diaMarcacao, horaMarcacao, banhoMarcacao, tosaMarcacao, consultaMarcacao, idPet, situacaoMarcacao, cpfTutor");
 
             if (chkConsulta.Checked)
             {
-                Consulta = chkConsulta.Text;
+                cmdsql.Append(", CRMVVet");
             }
 
-            cmdsql.Clear();
-            cmdsql.Append("INSERT INTO Marcacao (diaMarcacao, horaMarcacao, banhoMarcacao, tosaMarcacao, consultaMarcacao, CRMVVet, idPet) VALUES (");
+            cmdsql.Append(") VALUES (");
             cmdsql.Append("'" + Dia.ToString("yyyy-MM-dd") + "', ");
             cmdsql.Append("'" + Hora.ToString("HH:mm:ss") + "', ");
             cmdsql.Append("'" + Banho + "', ");
             cmdsql.Append("'" + Tosa + "', ");
             cmdsql.Append("'" + Consulta + "', ");
-            cmdsql.Append("'" + CRMV + "', ");
-            cmdsql.Append("'" + CodPet + "', ");
-            cmdsql.Append("'" + Situacao + "')");
+            cmdsql.Append(CodPet + ", ");
+            cmdsql.Append("'" + Situacao + "', ");
+            cmdsql.Append("'" + Tutor + "'");
 
+            if (chkConsulta.Checked)
+            {
+                cmdsql.Append(", '" + CRMV + "'");
+            }
+
+            cmdsql.Append(")");
 
             Conexao.StrSql = cmdsql.ToString();
 
@@ -84,6 +91,8 @@ namespace ProjetodosPets
 
             if (!string.IsNullOrEmpty(txtCodPet.Text))
             {
+
+                cmdsql.Clear();
                 cmdsql.Append("SELECT Pet.idPet, Pet.nomePet, Pet.cpfTutor, Tutor.nomeTutor, Marcacao.CRMVVet ");
                 cmdsql.Append("FROM Marcacao ");
                 cmdsql.Append("INNER JOIN Pet ON Marcacao.idPet = Pet.idPet ");
@@ -92,11 +101,11 @@ namespace ProjetodosPets
                 cmdsql.Append("WHERE Pet.idPet = " + CodPet);
                 Conexao.StrSql = cmdsql.ToString();
                 SDR = Conexao.RetornarDataReader();
+
                 if (SDR.Read())
                 {
-                    lblPet.Text = SDR["idPet"].ToString();
+                    lblPet.Text = SDR["nomePet"].ToString();
                     lblTutor.Text = SDR["nomeTutor"].ToString();
-                    lblVet.Text = SDR["CRMVVet"].ToString();
                     MessageBox.Show("Leitura executada com sucesso");
                 }
                 else
@@ -112,39 +121,29 @@ namespace ProjetodosPets
             frmMenu menu = new frmMenu();
 
             menu.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void chkConsulta_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkConsulta.Checked)
-            {
-                txtCRMV.Enabled = true;
-                txtCodPet.Enabled = true;
-            }
-            else
-            {
-                txtCRMV.Enabled = false;
-                txtCodPet.Enabled = false;
-
-                txtDia.Text = string.Empty;
-                txtHora.Text = string.Empty;
-                txtCRMV.Text = string.Empty;
-                txtCodPet.Text = string.Empty;
-            }
+            BloquearCampos();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (dgvMarcacao.SelectedRows.Count > 0)
-            {
-                int idMarcacao = Convert.ToInt32(dgvMarcacao.SelectedRows[0].Cells["IdMarcacao"].Value);
+            string CodPet = txtCodPet.Text;
 
-                cmdsql.Clear();
-                cmdsql.Append("DELETE FROM Marcacao ");
-                cmdsql.Append("WHERE IdMarcacao = " + idMarcacao);
+            if (string.IsNullOrEmpty(txtCodPet.Text))
+            {
+                MessageBox.Show("Está faltando o campo chave");
+            }
+            else
+            {
+                cmdsql.Remove(0, cmdsql.Length);
+                cmdsql.Append("DELETE FROM Marcacao WHERE idPet=" + CodPet + ";");
 
                 Conexao.StrSql = cmdsql.ToString();
+
 
                 if (Conexao.ExecutarCmd() > 0)
                 {
@@ -160,19 +159,7 @@ namespace ProjetodosPets
 
         private void CarregarGrid()
         {
-            string situacao = "Aberto";
-
-            if (!rbnAberto.Checked)
-            {
-                situacao = "Fechado";
-            }
-
-            Conexao.StrSql = "SELECT Marcacao.IdMarcacao, Marcacao.diaMarcacao, Marcacao.horaMarcacao, Marcacao.banhoMarcacao, Marcacao.tosaMarcacao, Marcacao.consultaMarcacao, Marcacao.situacaoMarcacao, Marcacao.CRMVVet, Pet.nomePet, Tutor.nomeTutor " +
-                    "FROM Marcacao " +
-                    "INNER JOIN Pet ON Marcacao.idPet = Pet.idPet " +
-                    "INNER JOIN Tutor ON Pet.cpfTutor = Tutor.cpfTutor " +
-                    "WHERE Marcacao.situacaoMarcacao = '" + situacao + "'";
-
+            Conexao.StrSql = "SELECT * FROM Marcacao";
             DS = Conexao.RetornarDataSet();
             DT = DS.Tables[0];
             dgvMarcacao.DataSource = DT;
@@ -180,7 +167,6 @@ namespace ProjetodosPets
 
         private void rbnAberto_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtCRMV_TextChanged(object sender, EventArgs e)
@@ -240,6 +226,19 @@ namespace ProjetodosPets
             else
             {
                 lblTutor.Text = "...";
+            }
+        }
+
+        private void BloquearCampos()
+        {
+            if (chkConsulta.Checked)
+            {
+                txtCRMV.Enabled = true;
+            }
+            else
+            {
+                txtCRMV.Enabled = false;
+                txtCRMV.Text = string.Empty;
             }
         }
     }
