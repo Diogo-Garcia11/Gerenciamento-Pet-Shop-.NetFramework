@@ -51,8 +51,8 @@
             this.lblPet = new System.Windows.Forms.Label();
             this.lblTutor = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.txtTutor = new System.Windows.Forms.TextBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcacao)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -270,12 +270,19 @@
             this.groupBox1.Controls.Add(this.lblVet);
             this.groupBox1.Controls.Add(this.txtCodPet);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(61, 207);
+            this.groupBox1.Location = new System.Drawing.Point(61, 188);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(281, 139);
+            this.groupBox1.Size = new System.Drawing.Size(281, 158);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            // 
+            // txtTutor
+            // 
+            this.txtTutor.Location = new System.Drawing.Point(64, 109);
+            this.txtTutor.Name = "txtTutor";
+            this.txtTutor.Size = new System.Drawing.Size(100, 20);
+            this.txtTutor.TabIndex = 22;
+            this.txtTutor.TextChanged += new System.EventHandler(this.txtTutor_TextChanged);
             // 
             // btnVoltar
             // 
@@ -285,14 +292,6 @@
             this.btnVoltar.TabIndex = 23;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
-            // 
-            // txtTutor
-            // 
-            this.txtTutor.Location = new System.Drawing.Point(64, 109);
-            this.txtTutor.Name = "txtTutor";
-            this.txtTutor.Size = new System.Drawing.Size(100, 20);
-            this.txtTutor.TabIndex = 22;
-            this.txtTutor.TextChanged += new System.EventHandler(this.txtTutor_TextChanged);
             // 
             // frmMarcacao
             // 

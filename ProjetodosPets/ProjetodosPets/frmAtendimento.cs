@@ -39,7 +39,7 @@ namespace ProjetodosPets
         }
         private void CarregarGrid()
         {
-            Conexao.StrSql = "SELECT * FROM Marcacao";
+            Conexao.StrSql = "SELECT * FROM Marcacao WHERE situacaoMarcacao = 'Abt' AND consultaMarcacao = 'Sim'";
             DS = Conexao.RetornarDataSet();
             DT = DS.Tables[0];
             dgvAtendimento.DataSource = DT;
@@ -58,7 +58,7 @@ namespace ProjetodosPets
 
             id = idMarcacao;
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT Pet.idPet, Tutor.nomeTutor, Marcacao.diaMarcacao, Marcacao.horaMarcacao FROM Marcacao INNER JOIN Pet ON Marcacao.idPet =Pet.idPet INNER JOIN Tutor ON Marcacao.cpfTutor = Tutor.cpfTutor WHERE idMarcacao = " + idMarcacao + ")");
+            cmdsql.Append("SELECT Pet.idPet, Tutor.nomeTutor, Marcacao.diaMarcacao, Marcacao.horaMarcacao FROM Marcacao INNER JOIN Pet ON Marcacao.idPet =Pet.idPet INNER JOIN Tutor ON Marcacao.cpfTutor = Tutor.cpfTutor WHERE idMarcacao = " + idMarcacao );
             Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
