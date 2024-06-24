@@ -125,7 +125,7 @@ namespace ProjetodosPets
             string nome = txtNome.Text;
             string data = txtData.Text;
 
-            string situacao = "Ativo";
+            string situacao = cboSituacao.Text;
             string sexo = "nada";
             if (rdMacho.Checked || rdFemea.Checked)
             {
@@ -278,52 +278,91 @@ namespace ProjetodosPets
                 lblNome.Text = "...";
             }
         }
-
-        private void dgvPet_CellClick(object sender, DataGridViewCellEventArgs e)
+        private string RetornarRaca(string id)
         {
-            string idPet = dgvPet.CurrentRow.Cells[0].Value.ToString();
-
-
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT Pet.nomePet, Pet.sexoPet, Pet.nascPet, Pet.situacaoPet, Pet.cpfTutor, ");
-            cmdsql.Append("Raca.descRaca, Especie.descEspecie ");
-            cmdsql.Append("FROM Pet ");
-            cmdsql.Append("INNER JOIN Raca ON Pet.idRaca = Raca.idRaca ");
-            cmdsql.Append("INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie ");
-            cmdsql.Append("WHERE Pet.idPet ="+ idPet);
-            Conexao.StrSql = cmdsql.ToString();
+            cmdsql.Append("SELECT descRaca FROM Raca WHERE idRaca =" + id);
 
+            Conexao.StrSql = cmdsql.ToString();
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
             {
+                string descRaca = SDR["descRaca"].ToString();
 
-                txtCodPet.Text = idPet;
+                return descRaca;
+            }
+            else
+            {
+                return id;
+            }
+            
+        }
 
-                txtNome.Text = SDR["nomePet"].ToString();
-                string sexo = SDR["sexoPet"].ToString();
-                if (sexo == "Macho")
+        private string RetornarEspecie(string id)
+        {
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("SELECT descEspecie FROM Especie WHERE idEspecie =" + id);
+
+            Conexao.StrSql = cmdsql.ToString();
+            SDR = Conexao.RetornarDataReader();
+
+
+            if (SDR.Read())
+            {
+                string descEspecie = SDR["descEspecie"].ToString();
+                return descEspecie;
+            }
+            else
+            {
+                return id;
+            }
+            
+        }
+        private void dgvPet_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string idPet = dgvPet.CurrentRow.Cells[0].Value.ToString();
+            string nomePet = dgvPet.CurrentRow.Cells[1].Value.ToString();
+            string sexoPet = dgvPet.CurrentRow.Cells[2].Value.ToString();
+            string nascPet = dgvPet.CurrentRow.Cells[3].Value.ToString();
+            string situacaoPet = dgvPet.CurrentRow.Cells[4].Value.ToString();
+            string cpfTutor = dgvPet.CurrentRow.Cells[5].Value.ToString();
+            string idRaca = dgvPet.CurrentRow.Cells[6].Value.ToString();
+            string idEspecie = dgvPet.CurrentRow.Cells[7].Value.ToString();
+
+
+
+            string descRaca= RetornarRaca(idRaca);
+           string descEspecie = RetornarEspecie(idEspecie);
+
+            
+
+            txtCodPet.Text = idPet;
+
+            txtNome.Text = nomePet;
+            
+                if (sexoPet == "Macho")
                 {
                     rdMacho.Checked = true;
                 }
-                if (sexo == "Femea")
+                if (sexoPet == "Femea")
                 {
                     rdFemea.Checked = true;
                 }
-                txtCPF.Text = SDR["cpfTutor"].ToString();
+            txtCPF.Text = cpfTutor;
 
-                txtData.Text = SDR["nascPet"].ToString();
+                txtData.Text = nascPet;
 
                 cboEspecie.Items.Clear();
-                cboEspecie.Items.Add(SDR["descEspecie"].ToString());
+                cboEspecie.Text = descEspecie;
 
                 cboRaca.Items.Clear();
-                cboRaca.Items.Add(SDR["descRaca"].ToString());
+                cboRaca.Text = descRaca;
 
                 cboSituacao.Items.Clear();
-                cboSituacao.Items.Add(SDR["situacaoPet"].ToString());
+                cboSituacao.Text = situacaoPet;
 
 
-            }
+            
             
 
 
@@ -337,6 +376,6 @@ namespace ProjetodosPets
 
         }
 
-       
+        
     }
 }

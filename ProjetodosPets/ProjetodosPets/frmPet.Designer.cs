@@ -249,11 +249,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 165);
+            this.label7.Location = new System.Drawing.Point(29, 166);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(164, 13);
+            this.label7.Size = new System.Drawing.Size(168, 13);
             this.label7.TabIndex = 37;
-            this.label7.Text = "Data de Nascimento ano-mes-dia";
+            this.label7.Text = "Data de Nascimento dia/mes/ano";
             // 
             // frmPet
             // 
