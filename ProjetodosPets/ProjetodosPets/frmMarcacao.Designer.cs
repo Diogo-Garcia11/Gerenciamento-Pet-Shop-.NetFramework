@@ -275,6 +275,7 @@
             this.groupBox1.Size = new System.Drawing.Size(281, 158);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+<<<<<<< Updated upstream
             // 
             // txtTutor
             // 
@@ -293,6 +294,44 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             // 
+=======
+            // 
+            // txtTutor
+            // 
+            this.txtTutor.Location = new System.Drawing.Point(64, 109);
+            this.txtTutor.Name = "txtTutor";
+            this.txtTutor.Size = new System.Drawing.Size(100, 20);
+            this.txtTutor.TabIndex = 22;
+            this.txtTutor.TextChanged += new System.EventHandler(this.txtTutor_TextChanged);
+            // 
+<<<<<<< HEAD
+            // txtTutor
+            // 
+            this.txtTutor.Location = new System.Drawing.Point(64, 109);
+            this.txtTutor.Name = "txtTutor";
+            this.txtTutor.Size = new System.Drawing.Size(100, 20);
+            this.txtTutor.TabIndex = 22;
+            this.txtTutor.TextChanged += new System.EventHandler(this.txtTutor_TextChanged);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+=======
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(2, 3);
+>>>>>>> 65417e1806acf40e4c5b409de3d97465a1f35d73
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 23;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+=======
+>>>>>>> 65417e1806acf40e4c5b409de3d97465a1f35d73
+            // 
+>>>>>>> Stashed changes
             // frmMarcacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,7 +389,7 @@
         private System.Windows.Forms.Label lblPet;
         private System.Windows.Forms.Label lblTutor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TextBox txtTutor;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

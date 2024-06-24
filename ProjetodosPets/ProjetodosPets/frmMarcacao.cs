@@ -116,13 +116,6 @@ namespace ProjetodosPets
 
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-
-            menu.Show();
-            this.Hide();
-        }
 
         private void chkConsulta_CheckedChanged(object sender, EventArgs e)
         {
@@ -240,6 +233,14 @@ namespace ProjetodosPets
                 txtCRMV.Enabled = false;
                 txtCRMV.Text = string.Empty;
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+
+            menu.Show();
+            this.Close();
         }
     }
 }
