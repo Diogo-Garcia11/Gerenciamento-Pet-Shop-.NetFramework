@@ -8,7 +8,7 @@
     [consultaMarcacao] NCHAR(3) NULL, 
     [situacaoMarcacao] NVARCHAR(10) NOT NULL, 
     [idPet] INT NOT NULL, 
-    [cpfTutor] NCHAR(11) NOT NULL, 
+    [cpfTutor] NCHAR(11) NULL, 
     [CRMVVet] NVARCHAR(6) NOT NULL, 
     CONSTRAINT [FK_Marcacao_ToPet] FOREIGN KEY ([idPet]) REFERENCES [Pet]([idPet]), 
     CONSTRAINT [FK_Marcacao_ToTutor] FOREIGN KEY ([cpfTutor]) REFERENCES [Tutor]([cpfTutor]), 

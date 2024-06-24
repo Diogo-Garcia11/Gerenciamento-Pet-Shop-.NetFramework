@@ -41,7 +41,6 @@
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.rdMacho = new System.Windows.Forms.RadioButton();
             this.rdFemea = new System.Windows.Forms.RadioButton();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.cboEspecie = new System.Windows.Forms.ComboBox();
             this.cboRaca = new System.Windows.Forms.ComboBox();
             this.cboSituacao = new System.Windows.Forms.ComboBox();
@@ -49,6 +48,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
+            this.txtData = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,15 +172,6 @@
             this.rdFemea.Text = "Fêmea";
             this.rdFemea.UseVisualStyleBackColor = true;
             // 
-            // dtpData
-            // 
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpData.Location = new System.Drawing.Point(32, 173);
-            this.dtpData.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(200, 20);
-            this.dtpData.TabIndex = 28;
-            // 
             // cboEspecie
             // 
             this.cboEspecie.FormattingEnabled = true;
@@ -247,11 +239,29 @@
             this.lblNome.TabIndex = 35;
             this.lblNome.Text = "...";
             // 
+            // txtData
+            // 
+            this.txtData.Location = new System.Drawing.Point(32, 182);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(148, 20);
+            this.txtData.TabIndex = 36;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 13);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Data de Nascimento ano-mes-dia";
+            // 
             // frmPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 629);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtData);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label6);
@@ -259,7 +269,6 @@
             this.Controls.Add(this.cboSituacao);
             this.Controls.Add(this.cboRaca);
             this.Controls.Add(this.cboEspecie);
-            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.rdFemea);
             this.Controls.Add(this.rdMacho);
             this.Controls.Add(this.txtCodPet);
@@ -297,7 +306,6 @@
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.RadioButton rdMacho;
         private System.Windows.Forms.RadioButton rdFemea;
-        private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.ComboBox cboEspecie;
         private System.Windows.Forms.ComboBox cboRaca;
         private System.Windows.Forms.ComboBox cboSituacao;
@@ -305,5 +313,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.Label label7;
     }
 }

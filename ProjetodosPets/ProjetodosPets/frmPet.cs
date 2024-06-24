@@ -35,36 +35,7 @@ namespace ProjetodosPets
 
         private void cboEspecie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string Especie = cboEspecie.Text;
-
-            cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie ='" + Especie + "'");
-
-            Conexao.StrSql = cmdsql.ToString();
-
-            SDR = Conexao.RetornarDataReader();
-            if (SDR.Read())
-            {
-                string id = SDR["idEspecie"].ToString();
-                idEspecie = id;
-                SDR = Conexao.RetornarDataReader();
-                cmdsql.Remove(0, cmdsql.Length);
-                cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id);
-                Conexao.StrSql = cmdsql.ToString();
-                if (SDR.Read())
-                {
-                    SDR = Conexao.RetornarDataReader();
-                    cboRaca.Items.Clear();
-                    while (SDR.Read())
-                    {
-                        cboRaca.Items.Add(SDR["descRaca"].ToString());
-                    }
-                }
-            }
-
-
-
-
+            CarregarRacas();
         }
         string idEspecie;
         private void cboRaca_SelectedIndexChanged(object sender, EventArgs e)
@@ -94,9 +65,12 @@ namespace ProjetodosPets
         private void frmPet_Load(object sender, EventArgs e)
         {
             CarregarGrid();
-            dtpData.Format = DateTimePickerFormat.Custom;
-            dtpData.CustomFormat = "MM/dd/yyyy";
-
+            CarregarEspecies();
+            
+        }
+        private void CarregarEspecies()
+        {
+            cboEspecie.Items.Clear();
             cmdsql.Remove(0, cmdsql.Length);
             cmdsql.Append("SELECT descEspecie FROM Especie");
             Conexao.StrSql = cmdsql.ToString();
@@ -105,6 +79,36 @@ namespace ProjetodosPets
             while (SDR.Read())
             {
                 cboEspecie.Items.Add(SDR["descEspecie"].ToString());
+            }
+        }
+        private void CarregarRacas() 
+        {
+            cboRaca.Items.Clear();
+            string Especie = cboEspecie.Text;
+
+            cmdsql.Remove(0, cmdsql.Length);
+            cmdsql.Append("SELECT idEspecie FROM Especie WHERE descEspecie ='" + Especie + "'");
+
+            Conexao.StrSql = cmdsql.ToString();
+
+            SDR = Conexao.RetornarDataReader();
+            if (SDR.Read())
+            {
+                string id = SDR["idEspecie"].ToString();
+                idEspecie = id;
+                SDR = Conexao.RetornarDataReader();
+                cmdsql.Remove(0, cmdsql.Length);
+                cmdsql.Append("SELECT descRaca FROM Raca WHERE idEspecie =" + id);
+                Conexao.StrSql = cmdsql.ToString();
+                if (SDR.Read())
+                {
+                    SDR = Conexao.RetornarDataReader();
+                    cboRaca.Items.Clear();
+                    while (SDR.Read())
+                    {
+                        cboRaca.Items.Add(SDR["descRaca"].ToString());
+                    }
+                }
             }
         }
         private void CarregarGrid()
@@ -119,7 +123,7 @@ namespace ProjetodosPets
         {
             string CPF = txtCPF.Text;
             string nome = txtNome.Text;
-            string data = dtpData.Text;
+            string data = txtData.Text;
 
             string situacao = "Ativo";
             string sexo = "nada";
@@ -167,6 +171,8 @@ namespace ProjetodosPets
                     MessageBox.Show("Erro ao executar a Inclusao");
                 }
             }
+            CarregarEspecies();
+            CarregarRacas();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -194,6 +200,8 @@ namespace ProjetodosPets
                     MessageBox.Show("Erro ao executar a exclusão");
                 }
             }
+            CarregarEspecies();
+            CarregarRacas();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -201,7 +209,7 @@ namespace ProjetodosPets
             string cod = txtCodPet.Text;
             string CPF = txtCPF.Text;
             string nome = txtNome.Text;
-            string data = dtpData.Text;
+            string data = txtData.Text;
             string situacao = cboSituacao.Text;
             string sexo = "nada";
 
@@ -248,6 +256,8 @@ namespace ProjetodosPets
             {
                 MessageBox.Show("Erro ao executar a alteração");
             }
+            CarregarEspecies();
+            CarregarRacas();
         }
         private void txtCPF_TextChanged(object sender, EventArgs e)
         {
@@ -275,14 +285,20 @@ namespace ProjetodosPets
 
 
             cmdsql.Remove(0, cmdsql.Length);
-            cmdsql.Append("SELECT Pet.nomePet, Pet.sexoPet, Pet.cpfTutor, Pet.nascPet, Especie.descEspecie, Raca.descRaca, Pet.situacaoPet FROM Pet INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie INNER JOIN Raca ON Pet.idRaca = Raca.idRaca WHERE Pet.idPet = " + idPet);
+            cmdsql.Append("SELECT Pet.nomePet, Pet.sexoPet, Pet.nascPet, Pet.situacaoPet, Pet.cpfTutor, ");
+            cmdsql.Append("Raca.descRaca, Especie.descEspecie ");
+            cmdsql.Append("FROM Pet ");
+            cmdsql.Append("INNER JOIN Raca ON Pet.idRaca = Raca.idRaca ");
+            cmdsql.Append("INNER JOIN Especie ON Pet.idEspecie = Especie.idEspecie ");
+            cmdsql.Append("WHERE Pet.idPet ="+ idPet);
             Conexao.StrSql = cmdsql.ToString();
-            
+
             SDR = Conexao.RetornarDataReader();
             if (SDR.Read())
             {
-                
+
                 txtCodPet.Text = idPet;
+
                 txtNome.Text = SDR["nomePet"].ToString();
                 string sexo = SDR["sexoPet"].ToString();
                 if (sexo == "Macho")
@@ -291,26 +307,36 @@ namespace ProjetodosPets
                 }
                 if (sexo == "Femea")
                 {
-                    rdFemea.Checked= true;
+                    rdFemea.Checked = true;
                 }
                 txtCPF.Text = SDR["cpfTutor"].ToString();
 
-                //dtpData.Value = SDR["nascPet"].ToString();
+                txtData.Text = SDR["nascPet"].ToString();
 
-                cboEspecie.Text = SDR["descEspecie"].ToString();
+                cboEspecie.Items.Clear();
+                cboEspecie.Items.Add(SDR["descEspecie"].ToString());
 
-                cboRaca.Text = SDR["descRaca"].ToString();
+                cboRaca.Items.Clear();
+                cboRaca.Items.Add(SDR["descRaca"].ToString());
 
+                cboSituacao.Items.Clear();
+                cboSituacao.Items.Add(SDR["situacaoPet"].ToString());
 
-                cboSituacao.Text = SDR["situacaoPet"].ToString();
-                MessageBox.Show("Leitura executada com sucesso");
 
             }
-            else
-            {
-                MessageBox.Show("Não Localizado");
-                
-            }
+            
+
+
+            //  MessageBox.Show("Leitura executada com sucesso");
+
+
+
+
+            //MessageBox.Show("Não Localizado");
+
+
         }
+
+       
     }
 }
