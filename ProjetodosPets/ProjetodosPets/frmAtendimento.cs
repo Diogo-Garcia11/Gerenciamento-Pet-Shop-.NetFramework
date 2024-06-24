@@ -39,7 +39,7 @@ namespace ProjetodosPets
         }
         private void CarregarGrid()
         {
-            Conexao.StrSql = "SELECT * FROM Marcacao WHERE situacaoMarcacao = Aberto";
+            Conexao.StrSql = "SELECT * FROM Marcacao";
             DS = Conexao.RetornarDataSet();
             DT = DS.Tables[0];
             dgvAtendimento.DataSource = DT;
